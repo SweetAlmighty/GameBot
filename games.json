@@ -1,0 +1,44 @@
+{
+    "games": [
+        {
+            "name": "Rainbow Six: Seige",
+            "players": 5
+        },
+        {
+            "name": "The Forest",
+            "players": 8
+        },
+        {
+            "name": "Apex Legends",
+            "players": 3
+        },
+        {
+            "name": "PUBG",
+            "players": 4
+        },
+        {
+            "name": "Dead by Daylight",
+            "players": 5
+        },
+        {
+            "name": "Due Process",
+            "players": 5
+        },
+        {
+            "name": "Super Animal Royale",
+            "players": 4
+        },
+        {
+            "name": "Master Chief Collection",
+            "players": 4
+        },
+        {
+            "name": "Risk of Rain 2",
+            "players": 4
+        },
+        {
+            "name": "Among Us",
+            "players": 10
+        }
+    ]
+}
