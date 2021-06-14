@@ -39,8 +39,6 @@ export function init() {
         on_message(message);
     });
 
-    console.log(process.env.TOKEN);
-
     client.login(process.env.TOKEN);
 }
 
