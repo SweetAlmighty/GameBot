@@ -39,6 +39,30 @@
         {
             "name": "Among Us",
             "players": 10
+        },
+        {
+            "name": "Phasmophobia",
+            "players": 4
+        },
+        {
+            "name": "Golf with your Friends",
+            "players": 12
+        },
+        {
+            "name": "Left 4 Dead 2",
+            "players": 4
+        },
+        {
+            "name": "Rising Storm 2",
+            "players": 6
+        },
+        {
+            "name": "Drawful 2",
+            "players": 8
+        },
+        {
+            "name": "Jackbox Party Pack (1 or 2)",
+            "players": 12
         }
     ]
 }

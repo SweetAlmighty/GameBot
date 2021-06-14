@@ -6,7 +6,7 @@
         },
         {
             "pre": "How about ",
-            "post": ", for old time's sake."
+            "post": "? You know, for old time's sake."
         },
         {
             "pre": "How does ",
@@ -31,6 +31,26 @@
         {
             "pre": "It is written in the stars: ",
             "post": "."
+        },
+        {
+            "pre": "",
+            "post": "...I mean, 'Meow'."
+        },
+        {
+            "pre": "Who's ready for some ",
+            "post": "?"
+        },
+        {
+            "pre": "Looty, shooty, ",
+            "post": ", and scooty."
+        },
+        {
+            "pre": "",
+            "post": "...are you shitting my non-existant nuts?"
+        },
+        {
+            "pre": "Might I suggest a drink or two while you play ",
+            "post": "?"
         }
     ]
 }
