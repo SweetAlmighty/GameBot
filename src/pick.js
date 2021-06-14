@@ -1,8 +1,8 @@
-import { resolve } from 'path';
+import { normalize } from 'path';
 import { readFileSync } from 'fs';
 
-const { games } = JSON.parse(readFileSync(resolve('./data/games.json')));
-const { messages } = JSON.parse(readFileSync(resolve('./data/games.json')));
+const { games } = JSON.parse(readFileSync(normalize('./data/games.json')));
+const { messages } = JSON.parse(readFileSync(normalize('./data/games.json')));
 
 export function create_message(name) {
     let message = messages[Math.floor(Math.random() * messages.length)];
