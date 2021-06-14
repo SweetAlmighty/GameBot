@@ -8,8 +8,8 @@ export function parse_message(message) {
         let args = message.substring(1).split(' ');
 
         return {
-            command: args.pop(),
-            arguments: args.pop() ?? 4,
+            command: args[0],
+            arguments: args[1] ?? 4,
         };
     } else {
         return null;
