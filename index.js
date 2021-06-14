@@ -1,4 +1,4 @@
-import { pick } from './src/pick';
+import { pick } from './src/pick.js';
 import Discord from 'discord.js'
 
 const client = new Discord.Client({
