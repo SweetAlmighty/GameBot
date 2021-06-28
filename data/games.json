@@ -63,6 +63,14 @@
         {
             "name": "Jackbox Party Pack (1 or 2)",
             "players": 12
+        },
+        {
+            "name": "Uno",
+            "players": 4
+        },
+        {
+            "name": "Elder Scrolls Online",
+            "players": 4
         }
     ]
 }
