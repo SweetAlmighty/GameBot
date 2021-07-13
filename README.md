@@ -14,3 +14,4 @@ Winston is the name of the bot that users will interact with.
 | Command |                                Description                              |      Parameters       | Required |  Example |
 |  :---   |                                   :---                                  |         :---          |   :---   |    :---  |
 |  !pick  |  Chooses a random game from the database. If a number of players is provided, the games to choose from will be filtered to support the amount of players. |     [# of players]    |    No    |   !pick / !pick 4 |
+|  !list  |  Returns all games listed in the database. If a number of players is provided, the listed games will be filtered to support the amount of players. |     [# of players]    |    No    |   !list / !list 4 |
