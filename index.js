@@ -1,9 +1,9 @@
-import Discord from 'discord.js'
-import { pick, list } from './src/commands.js';
+const Discord = require('discord.js');
+const commands = require('./src/commands');
 
 const client = new Discord.Client();
 
-export function parse_message(message) {
+exports.parse_message = (message) => {
     if (message.substring(0, 1) == '!') {
         let args = message.substring(1).split(' ');
 
@@ -16,18 +16,18 @@ export function parse_message(message) {
     }
 }
 
-export function on_message(message) {
+exports.on_message = (message) => {
     let response, msg;
 
     try {
-        response = parse_message(message.content);
+        response = exports.parse_message(message.content);
 
         switch (response?.command) {
             case 'pick':
-                msg = pick(response.arguments ?? 4);
+                msg = commands.pick(response.arguments ?? 4);
                 break;
             case 'list':
-                msg = list(response.arguments ?? 2);
+                msg = commands.list(response.arguments ?? 2);
                 break;
             default:
                 msg = 'I do not recognize that command. Try again, scrub.';
@@ -43,13 +43,13 @@ export function on_message(message) {
     }
 }
 
-export function init() {
+exports.init = () => {
     client.on('message', message => {
-        on_message(message);
+        exports.on_message(message);
     });
 
     client.login(process.env.TOKEN);
 }
 
 // Run 
-init();
+exports.init();

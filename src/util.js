@@ -1,15 +1,14 @@
-import { readFileSync } from 'fs';
+const fs = require('fs');
 
 let dir = '';
 
 switch(process.platform) {
-    case "win32": dir = './data/'; break;
     case "linux": dir = '/home/ubuntu/GameBot/data/'; break;
-    case "darwin": dir = './data/'; break;
+    default: dir = './data/'; break;
 }
 
-const { games } = JSON.parse(readFileSync((dir + 'games.json')));
-const { messages } = JSON.parse(readFileSync(dir + 'messages.json'));
+const { games } = JSON.parse(fs.readFileSync(dir + 'games.json'));
+const { messages } = JSON.parse(fs.readFileSync(dir + 'messages.json'));
 
 function find_games(players) {
     let available_games = games.reduce((accumulator, current) => {
@@ -20,18 +19,18 @@ function find_games(players) {
     }, []);
 
     if (available_games.length == 0)
-        return null;
+        return [];
 
     return available_games;
 }
 
-export function create_pick_message(name) {
+exports.create_pick_message = name => {
     let message = messages[Math.floor(Math.random() * messages.length)];
     return message.pre + name + message.post;
 }
 
-export function create_list_message(games, players) {
-    let message = 'The following games support up to ' + players + ' players:\n';
+exports.create_list_message = games => {
+    let message = 'The following games support your requested number of players:\n';
 
     games.forEach(game => {
         message += game.name + '\n';
@@ -40,7 +39,7 @@ export function create_list_message(games, players) {
     return message;
 }
 
-export function find_available_games(players) {
+exports.find_available_games = players => {
     let parsedPlayers = parseInt(players);
 
     if (isNaN(parsedPlayers) || parsedPlayers < 0) {

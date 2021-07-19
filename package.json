@@ -4,9 +4,9 @@
   "description": "Discord bot made for a private gaming Discord.",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage "
   },
-  "type": "module",
+  "type": "commonjs",
   "jest": {
     "collectCoverage": true,
     "coverageReporters": [
@@ -17,6 +17,6 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.3",
-    "jest": "^27.0.4"
+    "jest": "^27.0.4",
   }
 }
