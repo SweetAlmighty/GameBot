@@ -20,16 +20,7 @@ jest.mock("../../src/util", () => ({
     find_available_games: mock_values.mock_find_available_games
 }));
 
-//const utils = require('../../src/util');
 const commands = require('../../src/commands');
-
-/*
-beforeAll(() => {
-    utils.create_pick_message = mock_values.mock_create_pick_message;
-    utils.create_list_message = mock_values.mock_create_list_message;
-    utils.find_available_games = mock_values.mock_find_available_games;
-})
-*/
 
 describe("pick", () => {
     test("Runs a valid scenario for the pick command.", () => {
