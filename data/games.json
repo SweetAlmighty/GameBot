@@ -1,10 +1,6 @@
 {
     "games": [
         {
-            "name": "Rainbow Six: Seige",
-            "players": 5
-        },
-        {
             "name": "The Forest",
             "players": 8
         },
@@ -15,10 +11,6 @@
         {
             "name": "PUBG",
             "players": 4
-        },
-        {
-            "name": "Dead by Daylight",
-            "players": 5
         },
         {
             "name": "Due Process",
@@ -53,10 +45,6 @@
             "players": 4
         },
         {
-            "name": "Rising Storm 2",
-            "players": 6
-        },
-        {
             "name": "Drawful 2",
             "players": 8
         },
@@ -71,6 +59,10 @@
         {
             "name": "Elder Scrolls Online",
             "players": 4
+        },
+        {
+            "name": "Minecraft",
+            "players": 10
         }
     ]
 }
