@@ -5,7 +5,8 @@ Discord application I created for a private gaming Server. Current runs on a per
 To follow the development of this project, visit the Trello board [here](https://trello.com/b/wIj1KE92/gamebot).
 
 ## Packages
-Utilizes [Discord.js](https://www.npmjs.com/package/discord.js) to work with Discord's API.
+- [Discord.js](https://www.npmjs.com/package/discord.js)
+- [Jest](https://www.npmjs.com/package/jest)
 
 ## Winston
 Winston is the name of the bot that users will interact with. 
