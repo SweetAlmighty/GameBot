@@ -1,45 +1,55 @@
-import { pick } from './src/pick.js';
-import Discord from 'discord.js'
+const Discord = require('discord.js');
+const commands = require('./src/commands');
 
 const client = new Discord.Client();
 
-export function parse_message(message) {
+exports.parse_message = (message) => {
     if (message.substring(0, 1) == '!') {
         let args = message.substring(1).split(' ');
 
         return {
             command: args[0],
-            arguments: args[1] ?? 4,
+            arguments: args[1],
         };
     } else {
         return null;
     }
 }
 
-export function on_message(message) {
-    let response = parse_message(message.content);
+exports.on_message = (message) => {
+    let response, msg;
 
-    if (response) {
-        let msg;
-        switch (response.command) {
+    try {
+        response = exports.parse_message(message.content);
+
+        switch (response?.command) {
             case 'pick':
-                msg = pick(response.arguments);
+                msg = commands.pick(response.arguments ?? 4);
+                break;
+            case 'list':
+                msg = commands.list(response.arguments ?? 2);
                 break;
             default:
-                msg = 'Your princess is in another castle.';
+                msg = 'I do not recognize that command. Try again, scrub.';
                 break;
         }
-        
+    } catch (error) {
+        msg = 'Your princess is in another castle.';
+        console.log(error);
+    }
+
+    if (response && msg) {
         message.channel.send(msg);
     }
 }
 
-export function init() {
+exports.init = () => {
     client.on('message', message => {
-        on_message(message);
+        exports.on_message(message);
     });
 
     client.login(process.env.TOKEN);
 }
 
-init();
+// Run 
+exports.init();

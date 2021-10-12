@@ -51,6 +51,10 @@
         {
             "pre": "Might I suggest a drink or two while you play ",
             "post": "?"
+        },
+        {
+            "pre": "Start up ",
+            "post": " right meow!"
         }
     ]
 }
