@@ -43,13 +43,15 @@ Currently, the bot is running on an EC2 instance, and must be uploaded to the in
 	sudo apt-get install npm
 	sudo npm install -g pm2
 	```
-5. Clone the GameBot repository.
-6. cd into the GameBot directory, and run npm install
-7. cd back to the root directory, and run pm2 startup systemd
-8. Copy the last line of this command and run it.
+5. Create an environment variable on the instance called "TOKEN", which holds the Discord bot token needed to interact with Discord.
+	1. Run `export TOKEN=insert-token-here`, replacing "insert-token-here" with the token contained in the Discord Developer Portal. 
+6. Clone the GameBot repository.
+7. cd into the GameBot directory, and run npm install
+8. cd back to the root directory, and run pm2 startup systemd
+9. Copy the last line of this command and run it.
 	1. Running this command will ensure pm2 will start up on boot, in case your EC2 instance is rebooted.
-9. Run `pm2 start ./GameBot/index.js`
-10. The bot shoudl now be running.
+10. Run `pm2 start ./GameBot/index.js`
+11. The bot should now be running.
 
 ### Updating an existing instance
 
