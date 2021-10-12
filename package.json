@@ -9,6 +9,7 @@
   "author": "Brian Sweet",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.925.0",
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6"
   }
 }

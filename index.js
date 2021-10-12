@@ -2,9 +2,15 @@ let Discord = require('discord.io')
 let games_db = require('./games.json')
 let messages_db = require('./messages.json')
 
+const AWS = require('aws-sdk')
+
 let bot = new Discord.Client({
     token: process.env.TOKEN,
     autorun: true
+});
+
+let client = new AWS.CloudWatchLogs({
+    region: 'us-east-2'
 });
 
 function create_message(name) {
